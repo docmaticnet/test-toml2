@@ -12,7 +12,7 @@ document.addEventListener('alpine:init', () => {
 		socialLinks: [],
 
 		async loadData() {
-			const response = await fetch('./data.toml');
+			const response = await fetch('/data.toml');
 			const tomlText = await response.text();
 			const data = TOML.parse(tomlText);
 
