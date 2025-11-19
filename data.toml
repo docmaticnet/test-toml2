@@ -1,0 +1,99 @@
+[site]
+name = "MAGEZEEN"
+
+[[social]]
+name = "twitter"
+icon = "twitter-x"
+url = "https://twitter.com"
+
+[[social]]
+name = "facebook"
+icon = "facebook"
+url = "https://facebook.com"
+
+[[social]]
+name = "instagram"
+icon = "instagram"
+url = "https://instagram.com"
+
+[[social]]
+name = "linkedin"
+icon = "linkedin"
+url = "https://linkedin.com"
+
+[[posts]]
+id = 1
+title = "The Future of Sustainable Architecture in Urban Spaces"
+date = "Mar 15, 2024"
+author = "Sofia Martinez"
+category = "architecture"
+featured = true
+image = "https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=800"
+excerpt = "Exploring how modern cities are embracing green building practices and innovative design solutions to create more livable, environmentally conscious spaces for future generations."
+content = "As urban populations continue to grow, architects and city planners are reimagining what sustainable living looks like in dense metropolitan areas. From vertical gardens to passive cooling systems, the integration of nature and technology is reshaping our skylines. This comprehensive look at sustainable architecture examines breakthrough projects around the world and the principles driving this essential transformation in how we build our cities."
+
+[[posts]]
+id = 2
+title = "Minimalist Interior Design: Less is More"
+date = "Feb 28, 2024"
+author = "James Park"
+category = "lifestyle"
+featured = false
+image = "https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=800"
+excerpt = "Discover the art of creating peaceful, functional spaces through minimalist design principles"
+content = "Minimalism isn't just about having less—it's about making room for what truly matters. In this guide, we explore how to curate your living space with intention, choosing quality over quantity and creating an environment that promotes calm and clarity. Learn practical strategies for decluttering, selecting timeless pieces, and maintaining a minimalist aesthetic that works for your lifestyle."
+
+[[posts]]
+id = 3
+title = "Digital Nomad Guide: Working from Anywhere"
+date = "Jan 20, 2024"
+author = "Maya Chen"
+category = "travel"
+featured = false
+image = "https://images.pexels.com/photos/4226881/pexels-photo-4226881.jpeg?auto=compress&cs=tinysrgb&w=800"
+excerpt = "Essential tips and tools for maintaining productivity while exploring the world"
+content = "The digital nomad lifestyle offers unprecedented freedom, but it also comes with unique challenges. From finding reliable internet in remote locations to managing different time zones, this comprehensive guide covers everything you need to know. We share insights on the best destinations for remote work, essential tools and apps, and strategies for maintaining work-life balance while traveling."
+
+[[posts]]
+id = 4
+title = "Coffee Culture Around the World"
+date = "Dec 10, 2023"
+author = "Lucas Silva"
+category = "lifestyle"
+featured = false
+image = "https://images.pexels.com/photos/1986684/pexels-photo-1986684.jpeg?auto=compress&cs=tinysrgb&w=800"
+excerpt = "A journey through diverse coffee traditions and brewing methods across continents"
+content = "From the espresso bars of Italy to the traditional coffee ceremonies of Ethiopia, coffee culture varies dramatically around the globe. This exploration takes you on a sensory journey through different brewing methods, regional preferences, and the social rituals that make coffee more than just a beverage. Discover how each culture has shaped its unique relationship with this beloved drink."
+
+[[posts]]
+id = 5
+title = "The Art of Analog Photography in the Digital Age"
+date = "Nov 5, 2023"
+author = "Isabella Romano"
+category = "photography"
+featured = false
+image = "https://images.pexels.com/photos/2291004/pexels-photo-2291004.jpeg?auto=compress&cs=tinysrgb&w=800"
+excerpt = "Why film photography is experiencing a renaissance among modern creators"
+content = "In an era of infinite digital shots and instant gratification, more photographers are returning to film. The tactile process, the anticipation of development, and the unique aesthetic qualities of analog photography offer something digital can't replicate. We explore the technical aspects of shooting film, the best cameras for beginners, and why this slower, more intentional approach to photography is capturing the imagination of a new generation."
+
+[[posts]]
+id = 6
+title = "Urban Gardening: Growing Food in Small Spaces"
+date = "Oct 18, 2023"
+author = "Amir Hassan"
+category = "lifestyle"
+featured = false
+image = "https://images.pexels.com/photos/2412609/pexels-photo-2412609.jpeg?auto=compress&cs=tinysrgb&w=800"
+excerpt = "Transform your balcony or windowsill into a productive urban garden"
+content = "You don't need acres of land to grow your own food. Urban gardening is revolutionizing how city dwellers connect with their food sources, one container at a time. This practical guide covers everything from choosing the right plants for your space and light conditions to vertical gardening techniques and year-round growing strategies. Learn how to maximize limited space while creating a thriving edible garden."
+
+[[posts]]
+id = 8
+title = "Scandinavian Design Philosophy: Function and Beauty"
+date = "Aug 30, 2023"
+author = "Erik Andersson"
+category = "architecture"
+featured = false
+image = "https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=800"
+excerpt = "Understanding the timeless principles behind Nordic design excellence"
+content = "Scandinavian design has influenced the world with its emphasis on simplicity, functionality, and connection to nature. This philosophy extends beyond furniture to architecture, graphics, and lifestyle. We examine the historical context, key principles, and contemporary applications of Nordic design, exploring why its approach to creating beautiful, practical spaces continues to resonate globally."

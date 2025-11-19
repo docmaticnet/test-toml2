@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Magezeen - Blog</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<script type="module" src="./main.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	</head>
+	<body>
+		<div id="app" x-data="blogApp" x-init="loadData()">
+			<!-- Header -->
+			<header class="header">
+				<div class="header-content">
+					<div class="logo">
+						<span class="dot"></span>
+						<span x-text="siteName"></span>
+					</div>
+					<div class="social-icons">
+						<template x-for="social in socialLinks" :key="social.name">
+							<a
+								:href="social.url"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="social-icon"
+								:aria-label="social.name"
+							>
+								<i :class="'bi bi-' + social.icon"></i>
+							</a>
+						</template>
+					</div>
+				</div>
+			</header>
+
+			<!-- Featured Post -->
+			<section class="featured-post" x-show="featuredPost">
+				<div class="featured-content">
+					<div class="featured-text">
+						<div class="post-meta">
+							<span x-text="featuredPost?.date"></span>
+							<span> / BY <span x-text="featuredPost?.author"></span></span>
+							<span class="tag" x-text="featuredPost?.category"></span>
+						</div>
+						<h1 class="featured-title" x-text="featuredPost?.title"></h1>
+						<p class="featured-excerpt" x-text="featuredPost?.excerpt"></p>
+					</div>
+					<div class="featured-image">
+						<img :src="featuredPost?.image" :alt="featuredPost?.title" />
+					</div>
+				</div>
+			</section>
+
+			<!-- Articles Section -->
+			<section class="posts-section">
+				<div class="section-header">
+					<h2 class="section-title">
+						<span class="dot"></span>
+						ARTICLES
+					</h2>
+				</div>
+
+				<!-- Filter Bar -->
+				<div class="filter-bar">
+					<div class="filter-left">
+						<span class="filter-label">FILTER BY CATEGORY:</span>
+						<button
+							class="filter-btn"
+							:class="{ 'active': selectedCategory === 'all' }"
+							@click="selectedCategory = 'all'"
+						>
+							ALL
+						</button>
+						<button
+							class="filter-btn"
+							:class="{ 'active': selectedCategory === 'lifestyle' }"
+							@click="selectedCategory = 'lifestyle'"
+						>
+							LIFESTYLE
+						</button>
+						<button
+							class="filter-btn"
+							:class="{ 'active': selectedCategory === 'travel' }"
+							@click="selectedCategory = 'travel'"
+						>
+							TRAVEL
+						</button>
+						<button
+							class="filter-btn"
+							:class="{ 'active': selectedCategory === 'architecture' }"
+							@click="selectedCategory = 'architecture'"
+						>
+							ARCHITECTURE
+						</button>
+					</div>
+					<div class="filter-right">
+						<span class="sort-label">SORT BY</span>
+						<select class="sort-select" x-model="sortOrder">
+							<option value="default">DEFAULT</option>
+							<option value="newest">NEWEST</option>
+							<option value="oldest">OLDEST</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- Posts Grid -->
+				<div class="posts-grid">
+					<template x-for="post in filteredPosts" :key="post.id">
+						<article class="post-card" @click="openModal(post)">
+							<div class="post-image">
+								<img :src="post.image" :alt="post.title" />
+							</div>
+							<div class="post-content">
+								<div class="post-meta">
+									<span x-text="post.date"></span>
+									<span class="tag" x-text="post.category"></span>
+								</div>
+								<h3 class="post-title" x-text="post.title"></h3>
+							</div>
+						</article>
+					</template>
+				</div>
+			</section>
+
+			<!-- Modal -->
+			<div class="modal" x-show="modalOpen" @click.self="closeModal()" x-cloak>
+				<div class="modal-content" x-show="modalOpen" x-transition>
+					<button class="modal-close" @click="closeModal()">×</button>
+					<div class="modal-body" x-show="selectedPost">
+						<div class="modal-image">
+							<img :src="selectedPost?.image" :alt="selectedPost?.title" />
+						</div>
+						<div class="modal-text">
+							<div class="post-meta">
+								<span x-text="selectedPost?.date"></span>
+								<span> / BY <span x-text="selectedPost?.author"></span></span>
+								<span class="tag" x-text="selectedPost?.category"></span>
+							</div>
+							<h2 class="modal-title" x-text="selectedPost?.title"></h2>
+							<p class="modal-excerpt" x-text="selectedPost?.excerpt"></p>
+							<div class="modal-full-content" x-text="selectedPost?.content"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
